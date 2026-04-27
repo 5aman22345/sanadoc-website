@@ -2367,3 +2367,130 @@ nav .btn--primary,
 header .btn--primary {
   color: #ffffff !important;
 }
+
+/* ============================================
+   MOBILE FIXES – vollständige Überarbeitung
+   ============================================ */
+@media (max-width: 767px) {
+
+  /* --- Hero --- */
+  #produkt {
+    padding-top: 100px !important;
+    padding-bottom: 60px !important;
+    min-height: auto !important;
+  }
+  /* Laptop-Bild auf Mobile ausblenden */
+  #laptop-img {
+    display: none !important;
+  }
+  /* Hero-Content volle Breite */
+  #produkt .hero__content {
+    max-width: 100% !important;
+  }
+  .hero__headline {
+    font-size: 1.9rem !important;
+    line-height: 1.2 !important;
+  }
+  .hero__subtext {
+    font-size: 1rem !important;
+  }
+
+  /* --- Warum Sanadoc Bento-Grid --- */
+  #warum-sanadoc > div > div:last-child {
+    padding: 0 !important;
+  }
+  /* Haupt-Bento-Grid (2fr 1fr 1fr) auf 1 Spalte */
+  #warum-sanadoc [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
+  /* Große Karte: span 2 aufheben */
+  #warum-sanadoc [style*="grid-row:span 2"],
+  #warum-sanadoc [style*="grid-row: span 2"] {
+    grid-row: span 1 !important;
+  }
+  /* Untere 3er-Reihe auf 1 Spalte */
+  #warum-sanadoc [style*="grid-template-columns:repeat(3, 1fr)"],
+  #warum-sanadoc [style*="grid-template-columns: repeat(3, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+  /* Zahlen-Karte (90 Min) whitespace fix */
+  #warum-sanadoc [style*="white-space:nowrap"],
+  #warum-sanadoc [style*="white-space: nowrap"] {
+    white-space: normal !important;
+  }
+
+  /* --- Billing Section --- */
+  #billing > div {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    padding: 60px 20px !important;
+  }
+
+  /* --- Rechner --- */
+  #rechner {
+    padding: 60px 20px !important;
+  }
+  #rechner > div {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  /* Sticky aufheben */
+  #rechner > div > div:last-child {
+    position: static !important;
+  }
+
+  /* --- Footer --- */
+  .footer .container {
+    padding: 0 20px !important;
+  }
+  .footer__brand {
+    padding-left: 0 !important;
+  }
+  .footer__inner {
+    padding: 0 !important;
+  }
+  .footer__nav-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* --- Abschnitt-Überschriften --- */
+  .section-title {
+    font-size: 1.75rem !important;
+  }
+  #warum-sanadoc h2 {
+    font-size: 1.75rem !important;
+  }
+  #billing h2,
+  #rechner h2 {
+    font-size: 1.6rem !important;
+  }
+
+  /* --- Meeting Formular --- */
+  .meeting__box {
+    padding: 0 !important;
+  }
+
+  /* --- Hamburger Farbe über hellem Hero --- */
+  .hamburger__bar {
+    background-color: #111827 !important;
+  }
+}
+
+/* Tablet: Bento-Grid & Billing fix */
+@media (max-width: 900px) and (min-width: 768px) {
+  #warum-sanadoc [style*="grid-template-columns"] {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: auto !important;
+  }
+  #warum-sanadoc [style*="grid-row:span 2"],
+  #warum-sanadoc [style*="grid-row: span 2"] {
+    grid-row: span 1 !important;
+    grid-column: span 2 !important;
+  }
+  #billing > div {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+}
